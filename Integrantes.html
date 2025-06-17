@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membros do Grêmio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Membros do Grêmio</h1>
+    <nav>
+      <ul>
+        <li><a href="Site Grêmio.html">Início</a></li>
+        <li><a href="propostas.html">Propostas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Integrantes</h2>
+
+      <div class="membros-lista">
+        <button onclick="mostrarFoto('yasmim.jpg', 'Presidente', 'Yasmim')">Yasmim</button>
+        <button onclick="mostrarFoto('pedro.jpg', 'Vice-Presidente', 'Pedro')">Pedro</button>
+        <button onclick="mostrarFoto('eduardo.jpg', 'Secretário Geral', 'Eduardo')">Eduardo</button>
+        <button onclick="mostrarFoto('andrey.jpg', 'Tesoureiro Geral', 'Andrey')">Andrey</button>
+        <button onclick="mostrarFoto('natali.jpg', '1º Tesoureiro', 'Natali')">Natali</button>
+        <button onclick="mostrarFoto('breno.jpg', 'Diretora Social e de Inclusão', 'Breno')">Breno</button>
+        <button onclick="mostrarFoto('ana_clara.jpg', 'Diretora de Imprensa', 'Ana Clara')">Ana Clara</button>
+        <button onclick="mostrarFoto('lisboa.jpg', 'Diretor de Divulgação', 'Lisboa')">Lisboa</button>
+        <button onclick="mostrarFoto('welington.jpg', 'Diretor de Esportes', 'Welington')">Welington</button>
+        <button onclick="mostrarFoto('isabely.jpg', 'Diretora de Cultura', 'Isabely')">Isabely</button>
+        <button onclick="mostrarFoto('FEIO.jpg', '1º Secretário', 'Kauã')">Kauã</button>
+        <button onclick="mostrarFoto('ana_emanuele.jpg', 'Diretora de Saúde e Meio Ambiente', 'Ana Emanuele')">Ana Emanuele</button>
+        <button onclick="mostrarFoto('dylan.jpg', 'Diretor de Articulação Política', 'Dylan')">Dylan</button>
+      </div>
+
+      <div id="foto-membro" class="foto-membro">
+        <img id="imagem" src="" alt="" />
+        <p id="cargo"></p>
+        <p id="nome"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grêmio Estudantil</p>
+  </footer>
+
+  <script>
+    function mostrarFoto(imagem, cargo, nome) {
+      const container = document.getElementById('foto-membro');
+      const img = document.getElementById('imagem');
+      const cargoEl = document.getElementById('cargo');
+      const nomeEl = document.getElementById('nome');
+
+      img.src = imagem;
+      img.alt = nome;
+      cargoEl.textContent = cargo;
+      nomeEl.textContent = nome;
+
+      container.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
